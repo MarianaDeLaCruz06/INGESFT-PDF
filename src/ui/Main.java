@@ -29,15 +29,40 @@ public class Main{
 
             switch (decision) {
                 case 1:
-                    
+                    System.out.println("The operation to be performed is: f(x) = 2cos(x^2) ");
+
+                    System.out.println("Enter the first number of the interval");
+                    a = reader.nextDouble();
+
+                    System.out.println("Enter the second number of the interval");
+                    b = reader.nextDouble();
+
+
+                    System.out.println(metBis("f", a, b, epsilon));
                 break;
 
                 case 2:
                     
+                    System.out.println("The operation to be performed is: 3x^3 + 7x^2 + 5");
+
+                    System.out.println("Enter the first number of the interval");
+                    a = reader.nextDouble();
+
+                    System.out.println("Enter the second number of the interval");
+                    b = reader.nextDouble();
+
+                    System.out.println(metBis("g", a, b, epsilon));
                 break;
 
                 case 3:
-                    
+                    System.out.println("The operation to be performed is: xcos(x)");
+
+                    System.out.println("Enter the first number of the interval");
+                    a = reader.nextDouble();
+
+                    System.out.println("Enter the second number of the interval");
+                    b = reader.nextDouble();
+                    System.out.println(metBis("h", a, b, epsilon));
                 break;
             
                 case 4:
