@@ -53,5 +53,29 @@ public class Main{
         }
     }
 
+    public static double pow(double base, double expo){
 
+        double result= 1;
+
+        if(expo>=0){
+            for (int i=1; i<=expo; i++){
+            result *= base;
+            }
+        }else{
+            for (int i=1; i<=expo; i++){
+                result /= base;
+            }
+        }
+        return result;
+    }
+
+    public static double factorial(double fac){
+        double result = 1;
+        
+        for (int i = 1; i <= fac; i++) {
+          result *= i;
+        }
+        
+        return result;
+    }
 }
