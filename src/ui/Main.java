@@ -118,4 +118,30 @@ public class Main{
         }
     }
 
+    public static double metBis(String function, double a, double b, double epsilon){
+        double fa = evaluate(function, a);
+        double fb = evaluate(function, b);
+        double c = 0;
+        double fc = 0;
+        int iterations = 0;
+    
+        while (absoluteV(b - a) > epsilon && iterations < 100) {
+            c = (a + b) / 2;
+            fc = evaluate(function, c);
+    
+            if (fa * fc < 0) {
+                b = c;
+                fb = fc;
+            } else {
+                a = c;
+                fa = fc;
+            }
+    
+            iterations++;
+        }
+    
+        return c;
+
+    }
+
 }
