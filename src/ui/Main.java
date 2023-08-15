@@ -78,4 +78,21 @@ public class Main{
         
         return result;
     }
+
+     public static double cosine(double x){
+        double result= 0;
+        double numerator;
+        double denominator;
+        double term;
+
+        for (int i=0; i<=50; i++)
+        {
+            numerator = (pow(-1,i));
+            denominator = factorial(2*i);
+            term = pow(x,2*i);
+            result += (numerator/denominator)*term;
+        }
+        return result;
+    }
+
 }
