@@ -63,10 +63,10 @@ public class Main{
             }
         }else{
             for (int i=1; i<=expo; i++){
-                result /= base;
+                result /= base
             }
         }
-        return result;
+        return result
     }
 
     public static double factorial(double fac){
@@ -76,6 +76,6 @@ public class Main{
           result *= i;
         }
         
-        return result;
+        return result
     }
 }
