@@ -79,20 +79,43 @@ public class Main{
         return result;
     }
 
-     public static double cosine(double x){
+    public static double cosine(double x){
         double result= 0;
         double numerator;
         double denominator;
         double term;
 
-        for (int i=0; i<=50; i++)
-        {
+        for (int i=0; i<=50; i++){
             numerator = (pow(-1,i));
             denominator = factorial(2*i);
             term = pow(x,2*i);
             result += (numerator/denominator)*term;
         }
         return result;
+    }
+
+    public static double absoluteV(double numA){
+		if (numA<0){
+			numA = numA * (-1);
+		}
+		return numA;
+	}
+
+    public static double evaluate(String function, double x) {
+        switch (function) {
+            case "f":
+                return 2 * cosine(x * x);
+    
+            case "g":
+                return 3 * pow(x, 3) + 7 * pow(x, 2) + 5;
+    
+            case "h":
+                return x * cosine(x);
+    
+            default:
+                System.out.println("Invalid function");
+                return Double.NaN;
+        }
     }
 
 }
